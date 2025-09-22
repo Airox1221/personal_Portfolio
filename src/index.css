@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  @apply bg-zinc-900 text-zinc-50 h-[200vh];
+ }
+
+.menu_btn{
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl
+  hover:bg-zinc-50/15 transition-[transform,background-color]  active:scale-95 md:hidden;
+}
+
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-1 ring-inset ring-zinc-50/5 
+         scale-90 opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-none
+         md:visible md:scale-100 md:backdrop-blur-2xl 
+         ;
+}
+
+.navbar.active{
+  @apply opacity-100 scale-100 blur-none visible;
+}
+
+.nav-link{
+  @apply grid items-center h-9 px-4 text-sm md:flex-1 md:text-center text-zinc-50/50 hover:text-zinc-50/100 ;
+
+}
+.nav-link.active{
+  @apply text-zinc-900 duration-500;
+}
+.navbar .active-box{
+  @apply absolute bg-zinc-50 top-2 left-2 right-2 h-9 -z-10  rounded-lg transition-[top,left] duration-500 ;
+}
+.btn{
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl ring-inset ring-1 ring-zinc-50/5 font-medium text-sm transition-[background-color];
+}
+.btn-secondary{
+  @apply bg-zinc-50 max-md:hidden text-zinc-900 active:bg-zinc-50/80;
+}
+.container{
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+.img-box{
+  @apply bg-zinc-700 overflow-hidden;
+}
+.image-cover{
+  @apply w-full h-full object-cover;
+}
+.headline_1{
+  @apply max-w-max ;
+  background: -webkit-linear-gradient(0deg, #fafaff , #a1a1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline_1{
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.5] ;
+}
