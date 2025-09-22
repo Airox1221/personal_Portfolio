@@ -15,6 +15,7 @@
 import React from 'react';
 import profilePic from '../assets/profilepic.png';
 import avatar_img from '../assets/avatar.jpg';
+import { ButtonPrimary , ButtonOutline } from './Button';
 
 const Hero = () => {
   return (
@@ -43,7 +44,9 @@ const Hero = () => {
                     Passionate about creating simple, effective solutions for people and businesses.
                 </h2>
                 <div className="flex items-center gap-3">
-                    butn1 butn2
+                     <ButtonPrimary label="Download CV" icon="download"
+                     />  
+                     <ButtonOutline label="Scroll down" href='#about' icon='arrow_downward' />
                 </div>
             </div>
             <div className="hidden lg:block">
